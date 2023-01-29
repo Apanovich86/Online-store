@@ -3,6 +3,8 @@ const {DataTypes} = require('sequelize')
 
 const User = sequelize.define('user', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    name: {type: DataTypes.STRING, allowNull: false},
+    surname: {type: DataTypes.STRING, allowNull: false},
     email: {type: DataTypes.STRING, unique: true},
     password: {type: DataTypes.STRING, unique: true},
     role: {type: DataTypes.STRING, defaultValue: "USER"},
@@ -47,7 +49,6 @@ const DeviceInfo = sequelize.define('device_info', {
 
 const Order = sequelize.define('order', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-    created: {type: DataTypes.DATE, allowNull: false},
     address: {type: DataTypes.STRING, allowNull: false},
     status: {type: DataTypes.STRING, allowNull: false},
     amount: {type: DataTypes.INTEGER, allowNull: false}

@@ -5,9 +5,9 @@ const userRouter = require('./userRouter')
 const categoryRouter = require('./categoryRouter')
 const brandRouter = require('./brandRouter')
 
-router.use('/user', userRouter)
-router.use('/category', categoryRouter)
-router.use('/brand', brandRouter)
-router.use('/device', deviceRouter)
+router.use('/users', userRouter)
+router.use('/categories', categoryRouter)
+router.use('/brands', brandRouter)
+router.use('/devices', deviceRouter)
 
 module.exports = router
